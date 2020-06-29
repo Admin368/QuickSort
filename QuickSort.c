@@ -3,13 +3,24 @@
 //#include <stringio.h>
 #include <time.h>
 #define uchar unsigned char
-// PLEASE NOT I USED SYSTEM()
+// PLEASE NOTE I USED SYSTEM()
 // WITH ASSUMPTION CODE WILL BE RUN ON WINDOWS
+
+// DECLAIRE THE FOLLOWING HERE
+char student_name[10] = '$Student_Name';
+char student_number[20] = '$Student_id';
+char course_name[20] = '$Course_Name';
+char project_name[20] = '$Project_Name';
+
+// QUICK SORT CHARACTER COULD BE BOTH NUMBERS OR LETTERS
+// NUMBERS ARE BEST HANDLED IN MANULA INPUT MODE
+//HERE IF YOU HAVE A PRE DEFINED SET OF CHARACTERS TO SORT
+char characters[16] = "KRATELEPUIMQCXOS";
+
+
 char arr[20];
 int n, i, c;
 int b = 0;
-char name[10] = 'Paul';
-char stundent_number[20] = '2017020501001';
 int manual = 2; // states , 0 if not using manual entry,1 if using , 2 for neutral
 int letters = 2;// states , 0 if not using use of letters,1 if using , 2 for neutral
 char letter; //variable for decyphered letter
@@ -25,20 +36,20 @@ char decypheredx;
 void reset();
 void quicksort(int *arr, int low, int high);
 void logo(){
-  printf("DATASTRUCTURES ASSIGNMENT\n");
-  printf("PROJECT-EXPERIMENT\n");
+  printf("%s\n", course_name);
+  printf("%s\n", project_name);
   printf("by %s\n", student_number); 
-  printf("%s\n",name);
+  printf("%s\n",student_name);
 }
 
 int main(){
 c = ~b;
-system("title PAUL'S QUICK_SORT ALG");
+system("title %s'S QUICK_SORT ALG", student_name);
 while(1){
-printf("WELCOME TO DATASTRUCTURES\n");
-printf("PROJECT-EXPERIMENT_2   \n");
-printf("by 2017020501001\n"); 
-printf("PAUL KACHULE\n");
+printf("WELCOME TO %s\n", course_name);
+printf("%s\n", project_name);
+printf("by %s\n", student_id); 
+printf("%s\n", student_name);
 inputtype();
 if(manual==0){automatedinput();}
 else{manualinput();}
@@ -82,10 +93,10 @@ if(manual==1){
     int t;
     while(letters==2){
         system("cls");
-        printf("PAUL'S QUICK SORT ALG\n");
-        printf("PROJECT-EXPERIMENT_2  \n");
-        printf("by 2017020501001\n"); 
-        printf("PAUL KACHULE\n");
+        printf("%s'S QUICK SORT ALG\n", student_name);
+        printf("%s\n", project_name);
+        printf("by %s\n", student_id); 
+        printf("%s\n", student_name);
         printf("ARE YOU SORTING NUMBERS OR LETTERS\n");
         printf("INPUT 1 for numbers OR\n");
         printf("INPUT 2 for letters\n");
@@ -105,10 +116,10 @@ delay(800);
 void quicksort(int *arr, int low, int high){
   int pivot, i, j, temp;
   system("cls");
-  printf("PAUL'S QUICK SORT ALG\n");
-  printf("PROJECT-EXPERIMENT_2  \n");
-  printf("by 2017020501001\n"); 
-  printf("PAUL KACHULE\n");
+  printf("%s'S QUICK SORT ALG\n", student_name);
+  printf("%s\n", project_name);
+  printf("by %s\n", student_id); 
+  printf("%s\n", student_name);
   //delay(rand() % 100 + 1);
   printf("ARRAY[");
   int ii;
@@ -175,7 +186,7 @@ delay(500);
 printf("Entering Values\n");
 printf("KRATELEPUIMQCXOS\n");
 delay(200);
-char characters[16] = "KRATELEPUIMQCXOS";
+//char characters[16] = "KRATELEPUIMQCXOS";
 for(i = 0; i < n; i++){
     printf("Inputing Character %c",characters[i]);
     translate(characters[i]);
@@ -195,12 +206,12 @@ delay(2000);
 }
 
 void manualinput(){
-printf(" _________________________\n");
-printf("|PAUL'S QUICK SORT ALG    |\n");
-printf("|PROJECT-EXPERIMENT_2     |\n");
-printf("|by 2017020501001         |\n"); 
-printf("|PAUL KACHULE             |\n");
-printf("|_________________________|\n");
+printf("_________________________\n");
+printf(" %s'S QUICK SORT ALG\n", student_name);
+printf(" %s\n", project_name);
+printf(" by %s\n", student_id); 
+printf(" %s\n", student_name);
+printf("_________________________\n");
 printf("ENTER THE SIZE OF THE ARRAY\n");
 printf("NUMBER OF ELEMENTS:");
 scanf("%d", &n);
@@ -253,10 +264,10 @@ delay(2000);
 }
 void printoutput(){
 system("cls");
-printf("PAUL'S QUICK SORT ALG\n");
-printf("PROJECT-EXPERIMENT_2  \n");
-printf("by 2017020501001\n"); 
-printf("PAUL KACHULE\n");
+printf("%s'S QUICK SORT ALG\n", student_name);
+printf("%s\n", project_name);
+printf("by %s\n", student_id); 
+printf("%s\n", student_name);
 if (letters==0)
 {
 printf("SORTED NUMBER ARRAY\n");
