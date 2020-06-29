@@ -1,2 +1,2 @@
 # QuickSort
- Quicksort code for assignment
+Cool Quicksort code for assignment
