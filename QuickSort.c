@@ -7,10 +7,10 @@
 // WITH ASSUMPTION CODE WILL BE RUN ON WINDOWS
 
 // DECLAIRE THE FOLLOWING HERE
-char student_name[10] = '$Student_Name';
-char student_number[20] = '$Student_id';
-char course_name[20] = '$Course_Name';
-char project_name[20] = '$Project_Name';
+char student_name[20] = "$Student_Name";
+char student_id[20] = "$Student_id";
+char course_name[20] = "$Course_Name";
+char project_name[20] = "$Project_Name";
 
 // QUICK SORT CHARACTER COULD BE BOTH NUMBERS OR LETTERS
 // NUMBERS ARE BEST HANDLED IN MANULA INPUT MODE
@@ -18,7 +18,7 @@ char project_name[20] = '$Project_Name';
 char characters[16] = "KRATELEPUIMQCXOS";
 
 
-char arr[20];
+int arr[20];
 int n, i, c;
 int b = 0;
 int manual = 2; // states , 0 if not using manual entry,1 if using , 2 for neutral
@@ -38,13 +38,15 @@ void quicksort(int *arr, int low, int high);
 void logo(){
   printf("%s\n", course_name);
   printf("%s\n", project_name);
-  printf("by %s\n", student_number); 
+  printf("by %s\n", student_id); 
   printf("%s\n",student_name);
 }
 
 int main(){
 c = ~b;
-system("title %s'S QUICK_SORT ALG", student_name);
+char buf[32];
+sprintf(buf, "title %d'S QUICK_SORT ALG", student_name);
+system(buf);
 while(1){
 printf("WELCOME TO %s\n", course_name);
 printf("%s\n", project_name);
@@ -219,14 +221,13 @@ scanf("%d", &n);
 if(letters==0){
     printf("ENTER THE ELEMENT TO BE SORTED\n");
     printf("ENTER Element :");
-    gets(arr);
-    /*
+    //gets(arr);
     for(i = 0; i < n; i++){
         //system("cls");
         printf("ENTER Element Number %d of %d\n",i,n);
         printf("Element:");
         scanf("%d", &arr[i]);
-    }*/
+    }
 }
 if(letters==1){
 char characters[100];
